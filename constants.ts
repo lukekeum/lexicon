@@ -7,3 +7,5 @@ export const EXECUTE_WATERMARK = Symbol('lexicon:execute');
 export const ARG_WATERMARK = Symbol('lexicon:arg');
 
 export const CTX_WATERMARK = Symbol('lexicon:ctx');
+
+export const OPTION_WATERMARK = Symbol('lexicon:option');
