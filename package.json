@@ -19,8 +19,8 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "tsup index.ts --format esm,cjs --dts --clean",
-    "dev": "tsup index.ts --format esm --watch",
+    "build": "tsup pacakges/core/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup package/core/index.ts --format esm --watch",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "lint": "eslint . --ext .ts",
