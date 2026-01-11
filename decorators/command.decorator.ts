@@ -1,4 +1,8 @@
-import { COMMAND_WATERMARK, COMMAND_METADATA } from '../constants';
+import {
+  COMMAND_WATERMARK,
+  COMMAND_METADATA,
+  INJECTABLE_WATERMARK,
+} from '../constants';
 import { getOrInitCommandMeta } from '../metadata/store';
 
 type SlashCommand = {
@@ -47,6 +51,7 @@ export function Command(
 
   return (target: Function) => {
     Reflect.defineMetadata(COMMAND_WATERMARK, true, target);
+    Reflect.defineMetadata(INJECTABLE_WATERMARK, true, target);
 
     const meta = getOrInitCommandMeta(target);
     meta.prefixes = prefixes;
